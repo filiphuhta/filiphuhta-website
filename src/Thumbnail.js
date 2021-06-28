@@ -44,10 +44,10 @@ function Thumbnail(props) {
       </CardContent>
     </CardActionArea>
     <CardActions>
-      <Button size="small" color="primary">
+      <Button size="small" color="secondary">
         Read More
       </Button>
-      <Button size="small" color="primary">
+      <Button size="small" color="secondary">
         Learn More
       </Button>
     </CardActions>
