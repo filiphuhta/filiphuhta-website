@@ -6,8 +6,7 @@ import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
-    alignItems: 'center',
+    flex: 1,
     padding: theme.spacing(5),
     textAlign: 'center',
     color: theme.palette.text.secondary,
@@ -19,7 +18,10 @@ function Projects(props) {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={2}>
+      <Grid container spacing={5}
+  direction="column"
+  alignItems="center"
+  justify="center">
         <Grid item xs={12} >
   
           <Thumbnail
