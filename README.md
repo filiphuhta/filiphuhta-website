@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# My pesonal website 
 
 This project is a rewrite of my personal site filiphuhta.se to React instead of just pure Html, Css and JavaScript. (This site is not done yet)
 
