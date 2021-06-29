@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
 }));
-const Navbar = () => {
+function Navbar (props) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -40,20 +40,14 @@ const Navbar = () => {
     <div className={classes.root}>
     <AppBar position="fixed">
       <Toolbar>
-    <IconButton edge="end" 
-    color="inherit" 
-    aria-label="menu" 
-    className={classes.menuButton}
-    aria-controls="simple-menu" 
-    aria-haspopup="true" 
-    onClick={handleClick}
-    >
-      <MenuIcon/>
-    </IconButton>
-    <Typography variant="h6" className={classes.title}>
+      <Typography variant="h6">
             Filip huhta
           </Typography>
+    <Typography variant="h6" className={classes.title}>
+            Filip huhta 
+          </Typography>
 <Menu
+color="primary"
   id="simple-menu"
   anchorEl={anchorEl}
   keepMounted
@@ -64,6 +58,17 @@ const Navbar = () => {
   <MenuItem onClick={handleClose}><Link to="/articles" className="item">Articles</Link><Description/></MenuItem>
   <MenuItem onClick={handleClose}><Link to="/about" className="item">About</Link><AccountCircle/></MenuItem>
 </Menu>
+
+          <IconButton edge="start" 
+    color="inherit" 
+    aria-label="menu" 
+    className={classes.menuButton}
+    aria-controls="simple-menu" 
+    aria-haspopup="true" 
+    onClick={handleClick}
+    >
+      <MenuIcon/>
+    </IconButton>
     
   </Toolbar>
     </AppBar>

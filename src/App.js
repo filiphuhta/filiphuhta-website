@@ -22,10 +22,10 @@ const theme = createMuiTheme({
   },
   palette: {
     primary: {
-      main: blue[500]
+      main: blue[600]
     },
     secondary: {
-      main: pink[500]
+      main: pink[600]
     }
   }
 });
