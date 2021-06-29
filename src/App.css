@@ -7,6 +7,16 @@
   pointer-events: none;
 }
 
+* {
+  font-family: 'Pacifico' !important;
+  line-height: 1.8 !important; 
+  letter-spacing: .15em !important;
+}
+
+body{
+  background-color: rgb(232, 232, 228);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

@@ -12,43 +12,36 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 500,
+    width: 500,
   },
   media: {
     height: 250,
   },
+  button: {
+    width: '100%',
+  }
 });
 
 function Thumbnail(props) {
   const classes = useStyles();
   return (
     <Card className={classes.root}>
-    <CardActionArea>
-    <Link to={props.link}>
       <CardMedia
         className={classes.media}
         image={props.image}
         title="Project-img"
       />
-      </Link>
       <CardContent>
         <Typography gutterBottom variant="h5" component="h2">
-          Lizard
+        {props.title}
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p">
-          Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-          across all continents except Antarctica
+        {props.text}
         </Typography>
-              <div className="project-title">{props.title}</div>
-        <div className="project-category">{props.category}</div>
       </CardContent>
-    </CardActionArea>
     <CardActions>
-      <Button size="small" color="secondary">
+      <Button href={props.link} className={classes.button} color="secondary">
         Read More
-      </Button>
-      <Button size="small" color="secondary">
-        Learn More
       </Button>
     </CardActions>
   </Card>
