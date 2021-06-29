@@ -4,9 +4,13 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import {Link} from 'react-router-dom'; 
-import Button from '@material-ui/core/Button';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import MenuIcon from '@material-ui/icons/Menu'
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import AccountTree from '@material-ui/icons/AccountTree';
+import Description from '@material-ui/icons/Description';
 const useStyles = makeStyles(theme => ({
   links: {
     marginRight: theme.spacing(2),
@@ -23,20 +27,44 @@ const useStyles = makeStyles(theme => ({
 }));
 const Navbar = () => {
   const classes = useStyles();
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   return (
     <div className={classes.root}>
     <AppBar position="fixed">
       <Toolbar>
-    <IconButton edge="start" color="inherit" aria-label="menu" className={classes.menuButton}>
-      <MenuIcon />
+    <IconButton edge="end" 
+    color="inherit" 
+    aria-label="menu" 
+    className={classes.menuButton}
+    aria-controls="simple-menu" 
+    aria-haspopup="true" 
+    onClick={handleClick}
+    >
+      <MenuIcon/>
     </IconButton>
     <Typography variant="h6" className={classes.title}>
             Filip huhta
           </Typography>
-
-    <Button color="inherit"><Link to="/" className="item">Projects</Link></Button>
-    <Button color="inherit"> <Link to="/articles" className="item">Articles</Link></Button>
-    <Button color="inherit">  <Link to="/about" className="item">About</Link></Button>
+<Menu
+  id="simple-menu"
+  anchorEl={anchorEl}
+  keepMounted
+  open={Boolean(anchorEl)}
+  onClose={handleClose}
+>
+  <MenuItem onClick={handleClose}><Link to="/" className="item">Projects </Link><AccountTree/></MenuItem>
+  <MenuItem onClick={handleClose}><Link to="/articles" className="item">Articles</Link><Description/></MenuItem>
+  <MenuItem onClick={handleClose}><Link to="/about" className="item">About</Link><AccountCircle/></MenuItem>
+</Menu>
+    
   </Toolbar>
     </AppBar>
     </div>

@@ -39,7 +39,6 @@ function App() {
         <Route exact path="/" component={Projects} />
         <Route path="/articles" component={Articles} />
         <Route path="/about" component={About} />
-  
         </ThemeProvider>                             
       </div>
     </BrowserRouter>
