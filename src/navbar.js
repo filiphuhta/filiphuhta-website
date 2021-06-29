@@ -24,6 +24,9 @@ const useStyles = makeStyles(theme => ({
   title: {
     flexGrow: 1,
   },
+  menu: {
+    backgroundColor: 'rgba(245,255,250, 0.7)',
+  },
 }));
 function Navbar (props) {
   const classes = useStyles();
@@ -40,9 +43,6 @@ function Navbar (props) {
     <div className={classes.root}>
     <AppBar position="fixed">
       <Toolbar>
-      <Typography variant="h6">
-            Filip huhta
-          </Typography>
     <Typography variant="h6" className={classes.title}>
             Filip huhta 
           </Typography>
@@ -54,9 +54,9 @@ color="primary"
   open={Boolean(anchorEl)}
   onClose={handleClose}
 >
-  <MenuItem onClick={handleClose}><Link to="/" className="item">Projects </Link><AccountTree/></MenuItem>
-  <MenuItem onClick={handleClose}><Link to="/articles" className="item">Articles</Link><Description/></MenuItem>
-  <MenuItem onClick={handleClose}><Link to="/about" className="item">About</Link><AccountCircle/></MenuItem>
+  <MenuItem className={classes.menu} onClick={handleClose}><Link to="/" className="item">Projects </Link><AccountTree/></MenuItem>
+  <MenuItem className={classes.menu} onClick={handleClose}><Link to="/articles" className="item">Articles</Link><Description/></MenuItem>
+  <MenuItem className={classes.menu} onClick={handleClose}><Link to="/about" className="item">About</Link><AccountCircle/></MenuItem>
 </Menu>
 
           <IconButton edge="start" 

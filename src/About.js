@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(5),
     paddingTop: '10%', 
     textAlign: 'center',
-    color: theme.palette.text.secondary,
+    color: 'white',
   },
   jumbotron: {
     maxWidth: 700,
@@ -23,7 +23,7 @@ function About(props) {
 
   
   return (
-    <Grid container spacing={5} className={classes.root}
+    <Grid container spacing={5} className={classes.root} 
     direction="column"
     alignItems="center"
     justify="center">

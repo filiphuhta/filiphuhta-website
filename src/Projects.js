@@ -8,12 +8,13 @@ import Bitcoin from './images/bitcoin-app.jpeg'
 import ImageGallery from './images/image-gallery.jpeg'
 import FirstReactApp from './images/react-app.jpeg'
 import Website from './images/website.jpeg'
+import BackgroundImage from './images/image.jpeg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flex: 1,
     padding: theme.spacing(5),
-    paddingTop: '10%', 
+    marginTop: 50, 
     textAlign: 'center',
     color: theme.palette.text.secondary,
   },
@@ -23,6 +24,7 @@ function Projects(props) {
   const classes = useStyles();
 
   return (
+
     <div className={classes.root}>
       <Grid container spacing={5}
   direction="column"

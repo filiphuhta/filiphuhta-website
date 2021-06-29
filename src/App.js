@@ -10,8 +10,7 @@ import About from './About.js';
 import './App.css';
 import Navbar from './navbar.js'
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import pink from '@material-ui/core/colors/pink';
-import blue from '@material-ui/core/colors/blue';
+import Teal from '@material-ui/core/colors/teal';
  
 
 const theme = createMuiTheme({
@@ -22,10 +21,10 @@ const theme = createMuiTheme({
   },
   palette: {
     primary: {
-      main: blue[600]
+      main: 'rgb(245,255,250)'
     },
     secondary: {
-      main: pink[600]
+      main: Teal[600],
     }
   }
 });
@@ -39,7 +38,7 @@ function App() {
         <Route exact path="/" component={Projects} />
         <Route path="/articles" component={Articles} />
         <Route path="/about" component={About} />
-        </ThemeProvider>                             
+        </ThemeProvider>                        
       </div>
     </BrowserRouter>
   );

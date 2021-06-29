@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(5),
     paddingTop: '10%', 
     textAlign: 'center',
-    color: theme.palette.text.secondary,
+    color: 'white',
   },
   jumbotron: {
     maxWidth: 700,
