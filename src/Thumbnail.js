@@ -32,19 +32,19 @@ function Thumbnail(props) {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="h2">
-        {props.title}
+          {props.title}
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p">
-        {props.text}
+          {props.text}
         </Typography>
       </CardContent>
-    <CardActions>
-      <Button href={props.link} className={classes.button} color="secondary">
-        Read More
-      </Button>
-    </CardActions>
-  </Card>
+      <CardActions>
+        <Button href={props.link} className={classes.button} color="secondary">
+          Read More
+        </Button>
+      </CardActions>
+    </Card>
   )
 }
- 
+
 export default Thumbnail;

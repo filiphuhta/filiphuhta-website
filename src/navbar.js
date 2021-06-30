@@ -4,7 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import {Link} from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuIcon from '@material-ui/icons/Menu'
@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: 'rgba(245,255,250, 0.7)',
   },
 }));
-function Navbar (props) {
+function Navbar(props) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -41,37 +41,37 @@ function Navbar (props) {
   };
   return (
     <div className={classes.root}>
-    <AppBar position="fixed">
-      <Toolbar>
-    <Typography variant="h6" className={classes.title}>
-            Filip huhta 
+      <AppBar position="fixed">
+        <Toolbar>
+          <Typography variant="h6" className={classes.title}>
+            Filip huhta
           </Typography>
-<Menu
-color="primary"
-  id="simple-menu"
-  anchorEl={anchorEl}
-  keepMounted
-  open={Boolean(anchorEl)}
-  onClose={handleClose}
->
-  <MenuItem className={classes.menu} onClick={handleClose}><Link to="/" className="item">Projects </Link><AccountTree/></MenuItem>
-  <MenuItem className={classes.menu} onClick={handleClose}><Link to="/articles" className="item">Articles</Link><Description/></MenuItem>
-  <MenuItem className={classes.menu} onClick={handleClose}><Link to="/about" className="item">About</Link><AccountCircle/></MenuItem>
-</Menu>
+          <Menu
+            color="primary"
+            id="simple-menu"
+            anchorEl={anchorEl}
+            keepMounted
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+          >
+            <MenuItem className={classes.menu} onClick={handleClose}><Link to="/" className="item">Projects </Link><AccountTree /></MenuItem>
+            <MenuItem className={classes.menu} onClick={handleClose}><Link to="/articles" className="item">Articles</Link><Description /></MenuItem>
+            <MenuItem className={classes.menu} onClick={handleClose}><Link to="/about" className="item">About</Link><AccountCircle /></MenuItem>
+          </Menu>
 
-          <IconButton edge="start" 
-    color="inherit" 
-    aria-label="menu" 
-    className={classes.menuButton}
-    aria-controls="simple-menu" 
-    aria-haspopup="true" 
-    onClick={handleClick}
-    >
-      <MenuIcon/>
-    </IconButton>
-    
-  </Toolbar>
-    </AppBar>
+          <IconButton edge="start"
+            color="inherit"
+            aria-label="menu"
+            className={classes.menuButton}
+            aria-controls="simple-menu"
+            aria-haspopup="true"
+            onClick={handleClick}
+          >
+            <MenuIcon />
+          </IconButton>
+
+        </Toolbar>
+      </AppBar>
     </div>
   );
 };
