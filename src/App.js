@@ -10,6 +10,8 @@ import './App.css';
 import Navbar from './navbar.js'
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import Teal from '@material-ui/core/colors/teal';
+import Contact from './contact.js';
+import Introduction from './introduction.js';
 
 
 const theme = createMuiTheme({
@@ -37,6 +39,7 @@ function App() {
           <Route exact path="/" component={Projects} />
           <Route path="/articles" component={Articles} />
           <Route path="/about" component={About} />
+          <Contact/>
         </ThemeProvider>
       </div>
     </BrowserRouter>

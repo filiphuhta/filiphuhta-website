@@ -33,6 +33,65 @@ body{
   background-image: url('./images/image.jpeg');
 }
 
+.fa-icons-container a {
+  color: #00897b;
+  font-size: 60px;
+}
+
+.portrait {
+  max-height: 300px;
+  border-radius: 100%;
+  }
+
+  .about-border {
+    width: 25vw;
+    height: 2px;
+    background: white;
+    margin: 20px auto;
+    opacity: 0.7;
+    margin-bottom: 10%;
+    top: 0;
+}
+
+.text-border {
+  color: white;
+}
+
+.bottom-jumbotron{
+  background-image: none !important;
+  background-color: rgb(245,255,250);
+}
+
+.jumbotron {
+  background-image: url('./images/image2.jpeg');
+  color: rgb(36, 35, 35) !important;
+}
+
+.text-write-animation{
+  width: auto;
+  display: inline-block;
+  overflow: hidden;
+  line-height: 2.8;
+  border-right: solid #00897b;
+  white-space: nowrap;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  letter-spacing: .15em;
+  animation: typing 3.5s steps(40, end),
+			 blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { max-width: 0 }
+  to { max-width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #00897b; }
+}
+
 ul {
 background-color: rgb(245,255,250);
 }

@@ -30,6 +30,8 @@ function Projects(props) {
         alignItems="center"
         justify="center">
         <Grid item xs={12} >
+        <h1 className="text-border text-write-animation" >Projects</h1>
+  <div className="about-border"></div>
 
           <Thumbnail
             link="https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1435711&dswid=3040"
@@ -68,7 +70,7 @@ function Projects(props) {
             link="https://github.com/filiphuhta/filiphuhta-website"
             image={Website}
             title="My Website (filiphuhta.se)"
-            text="This site was made by React, Babel, Material UI, Yarn and SASS."
+            text="This site was made by React, Babel, Material UI and Yarn."
           />
         </Grid>
       </Grid>

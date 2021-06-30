@@ -1,6 +1,7 @@
 import React from "react"
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
+import Portrait from './images/filip_portrait.jpg'
 const useStyles = makeStyles((theme) => ({
   root: {
     flex: 1,
@@ -11,27 +12,25 @@ const useStyles = makeStyles((theme) => ({
   },
   jumbotron: {
     maxWidth: 700,
-    minHeight: '100vh',
-  },
-  chip: {
-    margin: '0.5rem',
-    fontSize: '1rem',
+    minHeight: '80vh',
   },
 }));
-function Articles(props) {
+function Introduction(props) {
   const classes = useStyles();
 
   return (
-    <Grid container spacing={5} className={[classes.root, "jumbotron"]}
+    <Grid container spacing={5} className={classes.root}
       direction="column"
       alignItems="center"
       justify="center">
       <Grid item xs={12} className={classes.jumbotron}>
-        <h1>Woops!</h1>
-        <p className="text-write-animation">This page is not done yet and under construction.</p>
+        <h1>Filip Huhta</h1>
+        <h2>Full Stack Developer</h2>
+        <img className="portrait" src={Portrait} 
+        alt="profile"/>
       </Grid>
     </Grid>
   )
 }
 
-export default Articles;
+export default Introduction;
